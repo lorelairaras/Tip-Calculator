@@ -1,5 +1,3 @@
-// Will further understand DOMS and eventlinsteners
-
 document.addEventListener("DOMContentLoaded", function () {
   const billInput = document.getElementById("bill");
   const peopleInput = document.getElementById("people");
@@ -24,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", handleTipBtnClick);
   });
 
+  // For each Tip button to have hover and click effects and go back to its original state
   function handleTipBtnClick(e) {
     tipBtns.forEach((btn) => {
       btn.classList.remove("active");
@@ -44,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     calculateTip();
   }
 
+  // To calculate the tip
   function calculateTip() {
     billValue = parseFloat(billInput.value) || 0;
     peopleValue = parseInt(peopleInput.value) || 0;
@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // In order to reset the calculator into empty values
   function resetCalculator() {
     billInput.value = "";
     peopleInput.value = "";
