@@ -1,3 +1,5 @@
+// Will further understand DOMS and eventlinsteners
+
 document.addEventListener("DOMContentLoaded", function () {
   const billInput = document.getElementById("bill");
   const peopleInput = document.getElementById("people");
